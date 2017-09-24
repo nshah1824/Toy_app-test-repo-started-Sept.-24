@@ -77,4 +77,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email)
     end
+    
+    Rails.application.routes.draw do
+  resources :users
+  root 'users#index'
+end
+
 end
