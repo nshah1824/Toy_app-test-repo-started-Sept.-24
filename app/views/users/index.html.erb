@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class= w3-text-white>Users</h1>
 
-<table>
+<table table class="w3-table w3-bordered">
   <thead>
-    <tr>
+    <tr class="w3-light-grey w3-hover-red">
       <th>Name</th>
       <th>Email</th>
       <th colspan="3"></th>
@@ -13,12 +13,12 @@
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr class="w3-light-grey w3-hover-red">
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class:"w3-button w3-white" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class:"w3-button w3-white" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"w3-button w3-white" %></td>
       </tr>
     <% end %>
   </tbody>
